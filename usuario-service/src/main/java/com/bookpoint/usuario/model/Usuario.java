@@ -26,7 +26,7 @@ public class Usuario {
 
     @NotBlank(message = "El rol es obligatorio")
     @Pattern(regexp = "ADMIN|CLIENTE|VENDEDOR|LOGISTICA|BODEGA",
-             message = "Rol invalido. Use: ADMIN, CLIENTE, VENDEDOR, LOGISTICA o BODEGA")
+            message = "Rol invalido. Use: ADMIN, CLIENTE, VENDEDOR, LOGISTICA o BODEGA")
     @Column(name = "rol", nullable = false)
     private String rol;
 }
