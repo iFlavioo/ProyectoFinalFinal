@@ -20,7 +20,9 @@ public class ProductoController {
     @PostMapping
     @Operation(summary = "Crear producto")
     public ProductoDTO crear(@Valid @RequestBody ProductoDTO dto) {
-        return ProductoDTO.fromEntity(productoService.guardarProducto(dto.toEntity()));
+    dto.setId(null); // fuerza creación, nunca update
+    return ProductoDTO.fromEntity(productoService.guardarProducto(dto.toEntity()));
+
     }
     @GetMapping
     @Operation(summary = "Listar todos")

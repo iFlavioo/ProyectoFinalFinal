@@ -26,7 +26,7 @@ public class Pedido {
 
     @NotBlank(message = "El estado es obligatorio")
     @Pattern(regexp = "PENDIENTE|ENVIADO|ENTREGADO|CANCELADO",
-             message = "Estado invalido. Use: PENDIENTE, ENVIADO, ENTREGADO o CANCELADO")
+            message = "Estado invalido. Use: PENDIENTE, ENVIADO, ENTREGADO o CANCELADO")
     @Column(name = "estado")
     private String estado;
 

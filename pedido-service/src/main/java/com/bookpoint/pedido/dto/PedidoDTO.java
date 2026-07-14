@@ -21,7 +21,7 @@ public class PedidoDTO {
 
     @NotBlank(message = "El estado no puede ser nulo ni vacio")
     @Pattern(regexp = "PENDIENTE|ENVIADO|ENTREGADO|CANCELADO",
-             message = "Estado invalido. Use: PENDIENTE, ENVIADO, ENTREGADO o CANCELADO")
+            message = "Estado invalido. Use: PENDIENTE, ENVIADO, ENTREGADO o CANCELADO")
     private String estado;
 
     @NotNull(message = "La fecha del pedido no puede ser nula ni vacia")
@@ -37,7 +37,7 @@ public class PedidoDTO {
     private DespachoDTO despacho;
 
     public PedidoDTO(Long id, Long usuarioId, Long productoId, int cantidad,
-                      String estado, LocalDate fechaPedido, String direccionEntrega) {
+                    String estado, LocalDate fechaPedido, String direccionEntrega) {
         this.id = id;
         this.usuarioId = usuarioId;
         this.productoId = productoId;

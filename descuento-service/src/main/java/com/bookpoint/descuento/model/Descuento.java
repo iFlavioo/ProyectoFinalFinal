@@ -25,7 +25,7 @@ public class Descuento {
     private Double porcentaje;
 
     @Pattern(regexp = "CUPON|CONVENIO_ESTUDIANTIL|PROMOCION",
-             message = "Tipo invalido. Use: CUPON, CONVENIO_ESTUDIANTIL o PROMOCION")
+            message = "Tipo invalido. Use: CUPON, CONVENIO_ESTUDIANTIL o PROMOCION")
     @Column(name = "tipo")
     private String tipo;
 

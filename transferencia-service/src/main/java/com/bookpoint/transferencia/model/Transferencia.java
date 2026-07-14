@@ -30,7 +30,7 @@ public class Transferencia {
     private int cantidad;
 
     @Pattern(regexp = "PENDIENTE|APROBADA|RECHAZADA",
-             message = "Estado invalido. Use: PENDIENTE, APROBADA o RECHAZADA")
+            message = "Estado invalido. Use: PENDIENTE, APROBADA o RECHAZADA")
     @Column(name = "estado")
     private String estado;
 

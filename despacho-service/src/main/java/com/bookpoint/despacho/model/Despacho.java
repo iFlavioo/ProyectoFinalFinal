@@ -21,7 +21,7 @@ public class Despacho {
     private Long sucursalId;
 
     @Pattern(regexp = "PREPARANDO|EN_CAMINO|ENTREGADO",
-             message = "Estado invalido. Use: PREPARANDO, EN_CAMINO o ENTREGADO")
+            message = "Estado invalido. Use: PREPARANDO, EN_CAMINO o ENTREGADO")
     @Column(name = "estado")
     private String estado;
 

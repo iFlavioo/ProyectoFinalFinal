@@ -26,7 +26,7 @@ public class UsuarioControllerTest {
     @SuppressWarnings("removal") @MockBean private UsuarioService usuarioService;
     @Autowired private ObjectMapper objectMapper;
 
-       @Test
+    @Test
     void testListarTodos() throws Exception {
         Usuario obj = new Usuario(1L, "Juan Perez", "juan@bookpoint.cl", "pass1234", "CLIENTE");
         Mockito.when(usuarioService.listarUsuarios()).thenReturn(Arrays.asList(obj));

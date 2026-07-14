@@ -21,7 +21,7 @@ public class UsuarioDTO {
 
     @NotBlank(message = "El rol no puede ser nulo ni vacio")
     @Pattern(regexp = "ADMIN|CLIENTE|VENDEDOR|LOGISTICA|BODEGA",
-             message = "Rol invalido. Use: ADMIN, CLIENTE, VENDEDOR, LOGISTICA o BODEGA")
+            message = "Rol invalido. Use: ADMIN, CLIENTE, VENDEDOR, LOGISTICA o BODEGA")
     private String rol;
 
     public static UsuarioDTO fromEntity(Usuario u) {
