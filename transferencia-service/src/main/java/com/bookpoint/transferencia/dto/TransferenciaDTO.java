@@ -25,7 +25,7 @@ public class TransferenciaDTO {
 
     @NotBlank(message = "El estado no puede ser nulo ni vacio")
     @Pattern(regexp = "PENDIENTE|APROBADA|RECHAZADA",
-             message = "Estado invalido. Use: PENDIENTE, APROBADA o RECHAZADA")
+            message = "Estado invalido. Use: PENDIENTE, APROBADA o RECHAZADA")
     private String estado;
 
     @NotNull(message = "La fecha de transferencia no puede ser nula ni vacia")
