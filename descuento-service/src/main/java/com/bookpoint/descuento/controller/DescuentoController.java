@@ -20,6 +20,7 @@ public class DescuentoController {
     @PostMapping
     @Operation(summary = "Crear descuento")
     public DescuentoDTO crear(@Valid @RequestBody DescuentoDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return DescuentoDTO.fromEntity(descuentoService.guardarDescuento(dto.toEntity()));
     }
     @GetMapping

@@ -20,6 +20,7 @@ public class DevolucionController {
     @PostMapping
     @Operation(summary = "Crear devolucion")
     public DevolucionDTO crear(@Valid @RequestBody DevolucionDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return DevolucionDTO.fromEntity(devolucionService.guardarDevolucion(dto.toEntity()));
     }
     @GetMapping

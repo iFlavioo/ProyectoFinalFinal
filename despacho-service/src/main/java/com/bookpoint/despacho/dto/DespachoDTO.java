@@ -18,7 +18,7 @@ public class DespachoDTO {
 
     @NotBlank(message = "El estado no puede ser nulo ni vacio")
     @Pattern(regexp = "PREPARANDO|EN_CAMINO|ENTREGADO",
-             message = "Estado invalido. Use: PREPARANDO, EN_CAMINO o ENTREGADO")
+            message = "Estado invalido. Use: PREPARANDO, EN_CAMINO o ENTREGADO")
     private String estado;
 
     @NotNull(message = "La fecha de despacho no puede ser nula ni vacia")

@@ -19,6 +19,7 @@ public class VentaController {
     @PostMapping
     @Operation(summary = "Crear venta con uno o multiples productos (precio y total calculados automaticamente)")
     public VentaDTO crear(@Valid @RequestBody VentaDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return VentaDTO.fromEntity(ventaService.guardarVenta(dto.toEntity()));
     }
     @GetMapping

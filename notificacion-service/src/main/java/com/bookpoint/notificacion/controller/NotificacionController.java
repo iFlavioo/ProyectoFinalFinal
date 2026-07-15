@@ -20,6 +20,7 @@ public class NotificacionController {
     @PostMapping
     @Operation(summary = "Crear notificacion")
     public NotificacionDTO crear(@Valid @RequestBody NotificacionDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return NotificacionDTO.fromEntity(notificacionService.guardarNotificacion(dto.toEntity()));
     }
     @GetMapping

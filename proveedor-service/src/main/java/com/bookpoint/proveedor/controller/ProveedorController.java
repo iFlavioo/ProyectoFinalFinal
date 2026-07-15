@@ -20,6 +20,7 @@ public class ProveedorController {
     @PostMapping
     @Operation(summary = "Crear proveedor")
     public ProveedorDTO crear(@Valid @RequestBody ProveedorDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return ProveedorDTO.fromEntity(proveedorService.guardarProveedor(dto.toEntity()));
     }
     @GetMapping

@@ -21,6 +21,7 @@ public class InventarioController {
     @PostMapping
     @Operation(summary = "Registrar inventario")
     public InventarioDTO crear(@Valid @RequestBody InventarioDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return InventarioDTO.fromEntity(inventarioService.guardarInventario(dto.toEntity()));
     }
 

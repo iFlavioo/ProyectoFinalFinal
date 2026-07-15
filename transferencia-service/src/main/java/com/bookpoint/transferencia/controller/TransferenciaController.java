@@ -20,6 +20,7 @@ public class TransferenciaController {
     @PostMapping
     @Operation(summary = "Crear transferencia")
     public TransferenciaDTO crear(@Valid @RequestBody TransferenciaDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return TransferenciaDTO.fromEntity(transferenciaService.guardarTransferencia(dto.toEntity()));
     }
     @GetMapping

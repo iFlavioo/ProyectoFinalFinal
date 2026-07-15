@@ -20,6 +20,7 @@ public class PedidoController {
     @PostMapping
     @Operation(summary = "Crear pedido")
     public PedidoDTO crear(@Valid @RequestBody PedidoDTO dto) {
+            dto.setId(null); // fuerza creación, nunca update
         return PedidoDTO.fromEntity(pedidoService.guardarPedido(dto.toEntity()));
     }
     @GetMapping

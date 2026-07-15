@@ -20,6 +20,7 @@ public class DespachoController {
     @PostMapping
     @Operation(summary = "Crear despacho")
     public DespachoDTO crear(@Valid @RequestBody DespachoDTO dto) {
+        dto.setId(null); // fuerza creación, nunca update
         return DespachoDTO.fromEntity(despachoService.guardarDespacho(dto.toEntity()));
     }
     @GetMapping
